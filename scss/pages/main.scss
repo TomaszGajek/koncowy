@@ -1,0 +1,25 @@
+
+
+.leftSide,
+.rightSide {
+	flex:1;
+	height:100vw;
+}
+
+.container-main {
+
+	display:flex;
+
+	.leftSide {
+	background:#3b3a36;
+	}
+
+	.rightSide {
+		background: #e9ece5;
+	}
+
+
+}
+
+
+

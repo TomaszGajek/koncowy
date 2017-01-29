@@ -1,0 +1,29 @@
+.container-projects {
+
+	display:flex;
+
+	.leftSide {
+	background:#3b3a36;
+	}
+
+	.rightSide {
+		background: #e9ece5;
+	}
+
+
+}
+
+.project-thumbs {
+
+	margin:0;
+	padding:0;
+	
+	img {
+		height:auto;
+		width:100%;
+	}
+}
+
+.project-thumbs__thumb {
+	list-style: none;
+}
