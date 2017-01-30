@@ -1,9 +1,53 @@
-<div class="container-projects">
+<div class="container-contact">
 	<div class="leftSide">
-		<div id="map"></div>
+		<ui-gmap-google-map center='map.center' zoom='map.zoom' options="options"></ui-gmap-google-map>
 	</div>
 	<div class="rightSide">
-	<navigation></navigation>
-	<h4>Contact form</h4>
-	<contact></contact>
+		<navigation></navigation>
+		<div class="wrapper">
+			<h2>Contact Form</h2>
+			<form name="userForm" novalidate autocomplete="off">
+
+				<div class="input-group" ng-class="{ 'error':userForm.username.$touched && userForm.username.$invalid }" >
+					<input type="text" name="username" placeholder="Your Name"
+						 ng-model="username" 
+						 ng-minlength="3" 
+						 ng-maxlength="10" 
+						 required />
+					<div ng-messages="userForm.username.$error" ng-if="userForm.username.$touched">
+						<p ng-message="minlength">Your name is too short.</p>
+				        <p ng-message="maxlength">Your name is too long.</p>
+				        <p ng-message="required">Your name is required.</p>
+					</div>
+				</div>
+
+				<div class="input-group" ng-class="{ 'error':userForm.email.$touched && userForm.email.$invalid }" >
+					<input type="email" name="email" placeholder="Email"
+						ng-model="email"
+						ng-minlength="5" 
+						ng-maxlength="20"
+						required>
+					<div ng-messages="userForm.email.$error" ng-if="userForm.email.$touched">
+						<p ng-message="minlength">Your email is too short.</p>
+				        <p ng-message="maxlength">Your email is too long.</p>
+				        <p ng-message="email">Your email is invalid</p>
+				        <p ng-message="required">Your email is required.</p>
+					</div>
+				</div>
+
+				<div class="textarea-group" ng-class="{ 'error':userForm.textarea.$touched && userForm.textarea.$invalid }" >
+					<textarea cols="30" rows="10" name="textarea" placeholder="Message" 
+						ng-model="textarea"
+						ng-minlength="5"
+						required>
+					</textarea>	
+					<div ng-messages="userForm.textarea.$error" ng-if="userForm.textarea.$touched">
+						<p ng-message="minlength">Your message is too short.</p>
+				        <p ng-message="required">Your message is required.</p>
+					</div>
+				</div>
+				<button type="submit"  ng-disabled="userForm.$invalid">SEND</button>
+			</form>
+		</div>	
+	</div>
 </div>

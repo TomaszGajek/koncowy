@@ -1,8 +1,16 @@
-var app = angular.module("app",['ngRoute']);
+var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 
 /* -- ROUTER -- */
 
-	app.config(function($routeProvider,$locationProvider){
+	app.config(function($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider){
+
+		uiGmapGoogleMapApiProvider.configure({
+        key: 'AIzaSyDUXW5CayVZ3HG8BXF0MVPBhhjVfwGxwv8',
+        v: '3.20',
+        libraries: 'weather,geometry,visualization'
+    	});
+
+		
 
 		$locationProvider.hashPrefix('');
 
@@ -23,10 +31,10 @@ var app = angular.module("app",['ngRoute']);
 				templateUrl:'pages/contact.html',
 				controller:'contactController'
 			})
-
-
 	});
-/* -- END of ROUTER -- */
+/* -- END of ROUTER -- */	
+
+
 
 /* -- TEMPLATES -- */
 
@@ -48,21 +56,6 @@ var app = angular.module("app",['ngRoute']);
 
 	});
 
-	app.directive('contact',function(){
-
-		return {
-			template:
-					'<form name="userForm">'+
-						'<input name="username" type="text" ng-model="user.username" ng-minlength="3" ng-maxlength="10">'+
-						'<input type="email" placeholder="subject">'+
-						'<textarea id="message" cols="30" rows="10"></textarea>'+
-						'<input id ="send" type="submit" value="send">'+
-					'</form>'+
-					'<p ng-show="userForm.username.$error.minlength">Username is too short</p>'+
-					'<p ng-show="userForm.username.$error.maxlength">Username is too long</p>'
-		}
-
-	});
 
 /* -- END of TEMPLATES -- */
 
@@ -107,14 +100,41 @@ var app = angular.module("app",['ngRoute']);
 	}]);
 
 
-	app.controller('contactController',['$scope','myService',function($scope, myService){
+	app.controller('contactController',function($scope, myService, uiGmapGoogleMapApi){
+
+		uiGmapGoogleMapApi.then(function(maps) {
+
+		     
+		})
+
+		$scope.map = { 
+			center: { 
+				latitude: 54.3666666667, longitude: 18.6833333333 
+				}, 
+			zoom: 10
+
+		};
+		
+
+		var styleArray = [{"featureType":"all","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"all","elementType":"labels","stylers":[{"visibility":"off"},{"saturation":"-100"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40},{"visibility":"off"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"off"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#4d6059"}]},{"featureType":"landscape","elementType":"geometry.stroke","stylers":[{"color":"#4d6059"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"color":"#4d6059"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"lightness":21}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#4d6059"}]},{"featureType":"poi","elementType":"geometry.stroke","stylers":[{"color":"#4d6059"}]},{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#7f8d89"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#7f8d89"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"#7f8d89"}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#7f8d89"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#2b3638"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#2b3638"},{"lightness":17}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#24282b"}]},{"featureType":"water","elementType":"geometry.stroke","stylers":[{"color":"#24282b"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels.icon","stylers":[{"visibility":"off"}]}]
+
+		$scope.options = {
+		   styles: styleArray,
+		  
+		};
+
 
 		$scope.slide = myService.slide;
 
+		$scope.submitForm = function(isValid){
+			if(isValid){
+				console.log('dziala!');
+			}
+		}
 
 
 
-	}]);
+	});
 /* -- END of CONTROLLERS -- */
 
 /* -- SERVICE -- */

@@ -2,6 +2,12 @@
 
 	display:flex;
 
+	.leftSide,
+	.rightSide {
+		width:100%;
+		
+	}
+
 	.leftSide {
 	background:#3b3a36;
 	}
@@ -26,4 +32,20 @@
 
 .project-thumbs__thumb {
 	list-style: none;
+}
+
+@media (max-width:800px){
+
+	.container-projects {
+		flex-direction: column;
+	}
+
+	.leftSide {
+		order:2;
+	}
+
+	.rightSide {
+		order:1;
+	}
+
 }
