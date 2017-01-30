@@ -21,7 +21,7 @@ var app = angular.module("app",['ngRoute']);
 			}).
 			when('/contact',{
 				templateUrl:'pages/contact.html',
-				controller:'fourthController'
+				controller:'contactController'
 			})
 
 
@@ -47,6 +47,23 @@ var app = angular.module("app",['ngRoute']);
 		}
 
 	});
+
+	app.directive('contact',function(){
+
+		return {
+			template:
+					'<form name="userForm">'+
+						'<input name="username" type="text" ng-model="user.username" ng-minlength="3" ng-maxlength="10">'+
+						'<input type="email" placeholder="subject">'+
+						'<textarea id="message" cols="30" rows="10"></textarea>'+
+						'<input id ="send" type="submit" value="send">'+
+					'</form>'+
+					'<p ng-show="userForm.username.$error.minlength">Username is too short</p>'+
+					'<p ng-show="userForm.username.$error.maxlength">Username is too long</p>'
+		}
+
+	});
+
 /* -- END of TEMPLATES -- */
 
 /* -- CONTROLLERS -- */
@@ -90,7 +107,7 @@ var app = angular.module("app",['ngRoute']);
 	}]);
 
 
-	app.controller('fourthController',['$scope','myService',function($scope, myService){
+	app.controller('contactController',['$scope','myService',function($scope, myService){
 
 		$scope.slide = myService.slide;
 
