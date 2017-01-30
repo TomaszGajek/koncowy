@@ -10,7 +10,7 @@
 	}
 
 	.leftSide {
-	background:#3b3a36;
+	background:$main-background;
 	}
 
 	.rightSide {
@@ -21,6 +21,7 @@
 		text-align: center;
 		margin-top:30%;
 		text-transform: uppercase;
+		color:$main-background;
 	}
 
 	form {
@@ -43,14 +44,14 @@
 	
 	input:focus,
 	textarea:focus {
-		border-top: 3px solid #3b3a36;
+		border-top: 3px solid $main-background;
 		outline:0;
 		
 	}
 
 
 	button {
-		background: #3b3a36;
+		background: $main-background;
 		outline:0;
 		border:3px solid transparent;
 		padding:10px;
@@ -60,7 +61,7 @@
 		letter-spacing: 1px;
 
 		&:hover {
-			border-top:3px solid #3b3a36;
+			border-top:3px solid $main-background;
 			background:#c0dfd9;
 			color:black;
 			cursor: pointer;
