@@ -120,7 +120,7 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 
 		$scope.options = {
 		   styles: styleArray,
-		  
+
 		};
 
 
