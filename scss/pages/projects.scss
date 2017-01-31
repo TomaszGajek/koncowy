@@ -38,14 +38,17 @@
 
 	.container-projects {
 		flex-direction: column;
+
+		.leftSide {
+			order:2;
+		}
+
+		.rightSide {
+			order:1;
+		}
+
 	}
 
-	.leftSide {
-		order:2;
-	}
-
-	.rightSide {
-		order:1;
-	}
+	
 
 }

@@ -1,6 +1,6 @@
 var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 
-/* -- ROUTER -- */
+/* -- ROUTER & GOOGLE MAPS -- */
 
 	app.config(function($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider){
 
@@ -55,8 +55,6 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 		}
 
 	});
-
-
 /* -- END of TEMPLATES -- */
 
 /* -- CONTROLLERS -- */

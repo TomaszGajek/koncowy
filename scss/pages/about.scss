@@ -24,14 +24,20 @@
 
 	.container-about {
 		flex-direction: column;
-	}
 
-	.leftSide {
+		.leftSide {
 		order:2;
+		}
+
+		.rightSide {
+			order:1;
+		}
+
+	
+
+
+
 	}
 
-	.rightSide {
-		order:1;
-	}
-
+	
 }
