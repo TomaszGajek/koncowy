@@ -27,6 +27,16 @@
 		}
 	}
 
+	.wrapper-form {
+		animation-name: fadeInDown;
+		animation-duration:1.5s;
+	}
+
+	.wrapper-info {
+		animation-name:fadeInUp;
+		animation-duration:1.5s;
+	}
+
 	form {
 		display:flex;
 		flex-direction:column;
@@ -92,7 +102,8 @@
 			left:0px;
 			top:30px;
 			padding:5px;
-			color:red;
+			color:#e62739;
+			font-size: 15px;
 		}
 	}	
 

@@ -97,19 +97,19 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 
 		]
 
-		$scope.delayInTime = function(){
+		$scope.delayInTimeText = function(){
 
 			$('p').each(function(i){
 				var item = $(this);
 				setTimeout(function(){
-
 					item.addClass('fadeIn');
 				},300*i);
 			});
 
 		};
 
-		$scope.delayInTime();
+		$scope.delayInTimeText();
+
 
 
 	}]);

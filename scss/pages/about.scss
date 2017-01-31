@@ -2,11 +2,15 @@
 
 	display:flex;
 
+
 	.leftSide,
 	.rightSide {
-		width:100%;
+		flex:1;
 		height:100vh;
+		display:flex;
 	}
+
+
 
 	.leftSide {
 	background:$main-background;
@@ -18,20 +22,51 @@
 
 	h2 {
 		text-align: center;
-		margin-top:30%;
+		// margin-top:30%;
 		text-transform: uppercase;
 		color:$main-background;
 		span {
 			color: #e62739;
 		}
 	}
-
-	p {
-		padding:10px;
-		text-align: justify;
+	
+	.container-about__text {
+		padding:20px;
+		animation-name:zoomIn;
+		animation-duration:1s;
+		height:300px;
+		max-width:600px;
+		margin:auto;
 	}
 
 
+
+}
+
+.container-about__circle {
+
+	position:absolute;
+	right:50%;
+	top:30%;
+	overflow:hidden;
+	
+
+
+	div {
+		position:relative;
+		right:-50%;	
+		display:block;
+		text-indent: -9999px;
+		height:500px;
+		width:500px;
+		background-color: #e62739;
+		background-repeat:no-repeat;
+		background-position: 50% 50%;
+		border-radius:50%;
+		animation-name:zoomIn;
+		animation-duration:1s;
+
+	}
 }
 
 
@@ -42,15 +77,12 @@
 
 		.leftSide {
 		order:2;
+		display:none;
 		}
 
 		.rightSide {
 			order:1;
 		}
-
-	
-
-
 
 	}
 
