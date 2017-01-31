@@ -1,10 +1,10 @@
-<div class="container-contact">
+<div class=" container container-contact">
 	<div class="leftSide">
 		<ui-gmap-google-map center='map.center' zoom='map.zoom' options="options"></ui-gmap-google-map>
 	</div>
 	<div class="rightSide">
 		<navigation></navigation>
-		<div class="wrapper">
+		<div class="wrapper-form">
 			<h2>C<span>o</span>ntact Form</h2>
 			<form name="userForm" novalidate autocomplete="off">
 
@@ -48,6 +48,29 @@
 				</div>
 				<button type="submit"  ng-disabled="userForm.$invalid">SEND</button>
 			</form>
-		</div>	
+		</div>
+
+		<div class="wrapper-info">
+
+			<div class="wrapper-info__icon">
+				<i class="fa fa-address-book fa-lg" aria-hidden="true"></i>
+				<p>kosmagajek@gmail.com</p>
+			</div>
+
+			<div class="wrapper-info__icon">
+				<i class="fa fa-phone-square fa-lg" aria-hidden="true"></i>
+				<p>698 660 951</p>
+			</div>
+
+			<div class="wrapper-info__icon">
+				<a target="_blank" href="https://www.facebook.com/tomasz.gajek1">
+				<i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+				<p>facebook</p>
+				</a>
+			</div>
+
+		</div>
+
 	</div>
+
 </div>

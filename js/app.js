@@ -97,6 +97,20 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 
 		]
 
+		$scope.delayInTime = function(){
+
+			$('p').each(function(i){
+				var item = $(this);
+				setTimeout(function(){
+					console.log(item);
+					item.addClass('fadeIn');
+				},300*i);
+			});
+
+		};
+
+		$scope.delayInTime();
+
 
 	}]);
 

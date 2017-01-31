@@ -2,8 +2,13 @@ body {
 	box-sizing:border-box;
 	// font-family: 'Roboto', sans-serif;
 	font-family: 'Julius Sans One', sans-serif;
-	background: $main-background;
+	background: $second-background;
 	
+}
+
+.container {
+	animation-name:fadeIn;
+	animation-duration:1s;
 }
 
 .container-main {
@@ -11,6 +16,7 @@ body {
 	display:flex;
 	overflow:hidden;
 	position:relative;
+
 
 	.logo {
 		position:absolute;
@@ -29,6 +35,7 @@ body {
 		background-size: 1300px 1300px;
 		background-repeat:no-repeat;
 		background-position: 50% 50%;
+
 
 	}
 

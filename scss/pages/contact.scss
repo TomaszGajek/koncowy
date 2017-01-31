@@ -117,6 +117,42 @@
 		margin-bottom:20px;
 	}
 
+	.wrapper-info {
+		width:90%;
+		margin:20px auto;
+		display:flex;
+		flex-direction:column;
+	}
+
+	.wrapper-info__icon {
+		display:flex;
+
+		p {
+			padding:5px;
+			margin:0;
+
+		}
+
+		i {
+			padding:5px;
+			color:$main-background;
+		}
+
+		a {
+			display:flex;
+			text-decoration: none;
+			color:black;
+
+			&:hover {
+				color: #e62739;
+				i {
+					color: #e62739;
+				}
+			}
+
+		}
+	}
+
 
 }
 
