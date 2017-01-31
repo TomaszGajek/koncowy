@@ -1,6 +1,7 @@
 body {
 	box-sizing:border-box;
-	font-family: 'Roboto', sans-serif;
+	// font-family: 'Roboto', sans-serif;
+	font-family: 'Julius Sans One', sans-serif;
 	background: $main-background;
 	
 }
@@ -24,7 +25,7 @@ body {
 		text-indent: -9999px;
 		height:600px;
 		width:700px;
-		background: url(../img/deer.svg);
+		background: url(../img/deer3.svg);
 		background-size: 1300px 1300px;
 		background-repeat:no-repeat;
 		background-position: 50% 50%;
@@ -33,13 +34,13 @@ body {
 
 	h1 {
 		position:absolute;
-		left:-80px;
+		left:-140px;
 		letter-spacing: 2px;
-		font-size:40px;
+		font-size:50px;
 		color: $main-background;
-		font-family: 'Anton', sans-serif;
+
 		span {
-			color:#e9ece5;
+			color:#e62739;//#e9ece5;
 		}
 	}
 

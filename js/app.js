@@ -46,10 +46,10 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 						+'<span></span>'
 					+'</div>'
 					+'<ul class="navigation">'
-			        	+'<li><a href="#">home</a></li>'
-			        	+'<li><a href="#/about">about</a></li>'
-			        	+'<li><a href="#/projects">projects</a></li>'
-			        	+'<li><a href="#/contact">contact</a></li>'
+			        	+'<li><a href="#">h<span>o</span>me</a></li>'
+			        	+'<li><a href="#/about">ab<span>o</span>ut</a></li>'
+			        	+'<li><a href="#/projects">pr<span>o</span>jects</a></li>'
+			        	+'<li><a href="#/contact">c<span>o</span>ntact</a></li>'
 				    +'</ul>'
 				    
 		}
