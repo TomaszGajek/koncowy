@@ -1,18 +1,20 @@
 body {
 	box-sizing:border-box;
 	font-family: 'Roboto', sans-serif;
-	overflow-x:hidden;
+	
 }
 
 .container-main {
 
 	display:flex;
-
+	overflow:hidden;
+	position:relative;
 
 	.logo {
 		position:absolute;
 		left:50%;
 		top:20%;
+
 	}
 	.logo__pic {
 		position:relative;
@@ -43,6 +45,7 @@ body {
 	.rightSide {
 		width:100%;
 		height:100vh;
+
 	}
 
 	.leftSide {
