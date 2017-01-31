@@ -92,6 +92,11 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 				img: 'img/project3.jpg',
 				href:'https://tomaszgajek.github.io/Bhagaskara/',
 				name: 'BHAGASKARA'
+			},
+			{
+				img: 'img/project4.jpg',
+				href:'https://tomaszgajek.github.io/Tagmet/',
+				name: 'STELMED'
 			}
 
 
