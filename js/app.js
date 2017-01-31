@@ -102,7 +102,7 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 			$('p').each(function(i){
 				var item = $(this);
 				setTimeout(function(){
-					console.log(item);
+
 					item.addClass('fadeIn');
 				},300*i);
 			});

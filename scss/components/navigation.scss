@@ -49,6 +49,12 @@ navigation {
 
 	ul {
 		display:none;
+		background:$second-background;
+		width:100%;
+		margin:0;
+		padding:15px;
+		z-index:8888;
+		position:fixed;
 
 	}
 
