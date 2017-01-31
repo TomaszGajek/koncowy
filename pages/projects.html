@@ -3,7 +3,18 @@
 	<div class="rightSide">
 	<navigation></navigation>
 	<ul class="project-thumbs">
-		<li  class="project-thumbs__thumb" ng-repeat="project in projects"><a href="{{project.href}}" target="_blank"><img ng-src="{{project.img}}"</a></li>
+		<li  class="project-thumbs__thumb" ng-repeat="project in projects">
+			<a href="{{project.href}}" target="_blank">
+				<img ng-src="{{project.img}}">
+					<div class="project-thumbs__thumb__overlay">
+						<div class="project-thumbs__thumb__content">
+							<h2>{{project.name}}</h2>
+						</div>
+					</div>
+
+			</a>
+		</li>
 	</ul>
 </div>
+
 

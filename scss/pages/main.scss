@@ -1,6 +1,7 @@
 body {
 	box-sizing:border-box;
 	font-family: 'Roboto', sans-serif;
+	background: $main-background;
 	
 }
 
@@ -36,6 +37,7 @@ body {
 		letter-spacing: 2px;
 		font-size:40px;
 		color: $main-background;
+		font-family: 'Anton', sans-serif;
 		span {
 			color:#e9ece5;
 		}
@@ -53,7 +55,7 @@ body {
 	}
 
 	.rightSide {
-		background: #e9ece5;
+		background: $second-background;
 	}
 	
 

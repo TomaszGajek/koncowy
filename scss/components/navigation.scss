@@ -4,6 +4,7 @@ navigation {
 	div {
 		box-sizing:border-box;
 		position:fixed;
+		z-index:99999999;
 		top:20px;
 		right:20px;
 		width:50px;

@@ -80,15 +80,18 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 
 			{
 				img: 'img/project1.jpg',
-				href:'http://www.tomaszgajek.pl'
+				href:'http://www.tomaszgajek.pl',
+				name: 'TG FOTOGRAFIA'
 			},
 			{
 				img: 'img/project2.jpg',
-				href:'https://tomaszgajek.github.io/innox/'
+				href:'https://tomaszgajek.github.io/innox/',
+				name: 'INNOX'
 			},
 			{
 				img: 'img/project3.jpg',
-				href:'https://tomaszgajek.github.io/Bhagaskara/'
+				href:'https://tomaszgajek.github.io/Bhagaskara/',
+				name: 'BHAGASKARA'
 			}
 
 
