@@ -120,7 +120,7 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 	}]);
 
 
-	app.controller('contactController',function($scope, myService, uiGmapGoogleMapApi){
+	app.controller('contactController',function($scope, myService, uiGmapGoogleMapApi,$http){
 
 		uiGmapGoogleMapApi.then(function(maps) {
 
@@ -146,11 +146,30 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 
 		$scope.slide = myService.slide;
 
-		$scope.submitForm = function(isValid){
-			if(isValid){
-				console.log('dziala!');
-			}
+
+
+		$scope.sendMessage = function() { 
+
+		var data = {
+			textarea: $scope.textarea,
+            username: $scope.username,
+            email: $scope.email
 		}
+
+		$('.textarea-group').find('p').html('wiadomosc zostala wyslana');	
+
+        $http( {
+            url: './sendMail.php',
+            method: 'POST',
+            dataType: 'json',
+            params: data
+        } ).then( function( data ) {
+            if(data.status == 'ok')
+                console.log(data);
+        }, function( data ) {
+            console.log('Error! ' + data );
+        } );
+    }
 
 
 
