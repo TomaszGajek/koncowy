@@ -6,7 +6,7 @@
 	.leftSide,
 	.rightSide {
 		width:100%;
-		flex:1;
+		height:100vh;
 		
 	}
 
@@ -17,11 +17,14 @@
 
 	.rightSide {
 		background: $second-background;
+		display:flex;
+		flex-direction:column;
+		justify-content:space-around;
 	}
 
 	h2 {
 		text-align: center;
-		margin-top:30%;
+		// margin-top:50px;
 		text-transform: uppercase;
 		color:$main-background;
 		span {
@@ -43,7 +46,7 @@
 		display:flex;
 		flex-direction:column;
 		width:90%;
-		margin:20px auto;
+		margin:0 auto;
 
 	}	
 
