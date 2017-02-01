@@ -35,6 +35,8 @@ body {
 		background-size: 1300px 1300px;
 		background-repeat:no-repeat;
 		background-position: 50% 50%;
+		animation-name: slideInDown;
+		animation-duration: 0.7s;
 
 
 	}
@@ -45,6 +47,8 @@ body {
 		letter-spacing: 2px;
 		font-size:50px;
 		color: $main-background;
+		animation-name: slideInUp;
+		animation-duration:1s;
 
 		span {
 			color:#e62739;//#e9ece5;

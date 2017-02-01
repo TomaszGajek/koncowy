@@ -2,15 +2,13 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 
 /* -- ROUTER & GOOGLE MAPS -- */
 
-	app.config(function($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider){
+	app.config(['$routeProvider','$locationProvider','uiGmapGoogleMapApiProvider',function($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider){
 
 		uiGmapGoogleMapApiProvider.configure({
         key: 'AIzaSyDUXW5CayVZ3HG8BXF0MVPBhhjVfwGxwv8',
         v: '3.20',
         libraries: 'weather,geometry,visualization'
     	});
-
-		
 
 		$locationProvider.hashPrefix('');
 
@@ -31,9 +29,8 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 				templateUrl:'pages/contact.html',
 				controller:'contactController'
 			})
-	});
+	}]);
 /* -- END of ROUTER -- */	
-
 
 
 /* -- TEMPLATES -- */
@@ -50,10 +47,8 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 			        	+'<li><a href="#/about">ab<span>o</span>ut</a></li>'
 			        	+'<li><a href="#/projects">pr<span>o</span>jects</a></li>'
 			        	+'<li><a href="#/contact">c<span>o</span>ntact</a></li>'
-				    +'</ul>'
-				    
+				    +'</ul>'				    
 		}
-
 	});
 /* -- END of TEMPLATES -- */
 
@@ -115,17 +110,35 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 
 		$scope.delayInTimeText();
 
+		$scope.delayInTimeThumb = function(){
+
+			$(document).bind("DOMNodeInserted", function() {
+
+
+			   $(this).find('.project-thumbs__thumb').each(function(i){
+			   		var item = $(this);
+					setTimeout(function(){
+						
+						item.addClass('zoomIn');
+					},500*i);
+				});
+
+			});
+		};
+
+
+		$scope.delayInTimeThumb();
 
 
 	}]);
 
 
-	app.controller('contactController',function($scope, myService, uiGmapGoogleMapApi,$http){
+	app.controller('contactController',['$scope', 'myService','uiGmapGoogleMapApi','$http',function($scope, myService, uiGmapGoogleMapApi,$http){
 
-		uiGmapGoogleMapApi.then(function(maps) {
+		// uiGmapGoogleMapApi.then(function(maps) {
 
 		     
-		})
+		// })
 
 		$scope.map = { 
 			center: { 
@@ -173,7 +186,7 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 
 
 
-	});
+	}]);
 /* -- END of CONTROLLERS -- */
 
 /* -- SERVICE -- */

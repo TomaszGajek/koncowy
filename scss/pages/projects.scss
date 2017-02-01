@@ -87,13 +87,19 @@
 	list-style: none;
 	position:relative;
 	margin-bottom:-5px;
+	opacity:0;
+	// animation-name: fadeIn;
+ // 	animation-duration:5s;
+
 	
 }
 
-
-li.fadeIn {
+.project-thumbs__thumb.zoomIn {
 	opacity:1;
 }
+
+
+
 
 .project-thumbs__thumb__overlay {
 	position:absolute;
