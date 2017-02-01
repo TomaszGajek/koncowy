@@ -6,11 +6,13 @@
 	.leftSide,
 	.rightSide {
 		width:100%;
+		flex:1;
 		
 	}
 
 	.leftSide {
 	background:$main-background;
+
 	}
 
 	.rightSide {
@@ -131,8 +133,8 @@
 	.wrapper-info {
 		width:90%;
 		margin:20px auto;
-		display:flex;
-		flex-direction:column;
+		// display:flex;
+		// flex-direction:column;
 	}
 
 	.wrapper-info__icon {

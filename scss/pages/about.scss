@@ -69,6 +69,15 @@
 	}
 }
 
+@media (max-width:1300px){
+	.container-about__circle {
+		top:25%;
+		div {
+			height:400px;
+			width:400px;
+		}
+	}
+}
 
 @media (max-width:800px){
 
