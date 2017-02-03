@@ -26,7 +26,7 @@
 					<input type="email" name="email" placeholder="Email"
 						ng-model="email"
 						ng-minlength="5" 
-						ng-maxlength="20"
+						ng-maxlength="40"
 						required>
 					<div ng-messages="userForm.email.$error" ng-if="userForm.email.$touched">
 						<p ng-message="minlength">Your email is too short.</p>
@@ -72,6 +72,13 @@
 					<p>facebook</p>
 				</a>
 			</div>
+
+			<div class="wrapper-info__icon">
+				<a target="_blank" href="https://github.com/TomaszGajek">
+					<i class="fa fa-github-alt fa-lg" aria-hidden="true"></i>
+					<p>github</p>
+				</a>
+			</div>
 		</div>	
 
 		
@@ -79,3 +86,5 @@
 	</div>
 
 </div>
+
+

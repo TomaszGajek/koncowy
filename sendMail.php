@@ -9,7 +9,7 @@ $message = "Nowa wiadomość z seriwsu<br/>--------------------------<br/>" . $_
 $mail = new PHPMailer;
 
 // z jakiego konta wysylamy maile
-$mail->isSMTP();
+//$mail->isSMTP();
 $mail->Host = 'smtp.gmail.com';
 $mail->SMTPAuth = true;
 $mail->Username = 'kontodowysylaniamaili@gmail.com';

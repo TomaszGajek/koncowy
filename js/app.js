@@ -89,6 +89,16 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
 				name: 'BHAGASKARA'
 			},
 			{
+				img: 'img/project5.jpg',
+				href:'https://tomaszgajek.github.io/TODO/',
+				name: 'TODO LIST'
+			},
+			{
+				img: 'img/project6.jpg',
+				href:'https://tomaszgajek.github.io/szablon/',
+				name: 'TEMPLATE'
+			},
+			{
 				img: 'img/project4.jpg',
 				href:'https://tomaszgajek.github.io/Tagmet/',
 				name: 'STELMED'
@@ -176,12 +186,10 @@ var app = angular.module('app',['ngRoute','ngMessages','uiGmapgoogle-maps']);
             method: 'POST',
             dataType: 'json',
             params: data
-        } ).then( function( data ) {
-            if(data.status == 'ok')
-                console.log(data);
-        }, function( data ) {
-            console.log('Error! ' + data );
-        } );
+        } ).then( function(response) {
+        		return response;
+            });
+
     }
 
 
