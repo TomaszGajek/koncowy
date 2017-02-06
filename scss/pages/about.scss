@@ -69,9 +69,30 @@
 	}
 }
 
-@media (max-width:1300px){
+@media (max-width:2200px){
+	.container-about__circle {
+		top:28%;
+		div {
+			height:400px;
+			width:400px;
+		}
+	}
+}
+
+@media (max-width:1600px){
 	.container-about__circle {
 		top:25%;
+		div {
+			height:400px;
+			width:400px;
+		}
+	}
+}
+
+
+@media (max-width:1400px){
+	.container-about__circle {
+		top:20%;
 		div {
 			height:400px;
 			width:400px;

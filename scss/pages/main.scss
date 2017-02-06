@@ -74,7 +74,25 @@ body {
 }
 
 
-@media(max-width:1300px){
+@media(max-width:1800px){
+	.container-main {
+
+		.logo {
+			top:18%;
+
+		}
+		.logo__pic {
+			height:400px;
+			width:500px;
+			background-size: 800px 800px;
+		}
+
+
+	}
+}
+
+
+@media(max-width:1400px){
 	.container-main {
 
 		.logo {
